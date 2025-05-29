@@ -1,0 +1,19 @@
+FROM ghcr.io/cockpit-project/cockpit:latest
+
+# Swtich back to root
+USER root
+WORKDIR /
+
+# Install extra packages
+RUN dnf -y install --disablerepo=fedora-cisco-openh264 --setopt=install_weak_deps=False \
+        gh \
+        zsh \
+        neovim \
+        kitty \
+        chromium \
+    && \
+    dnf clean all
+
+# Go back to user
+USER user
+WORKDIR /work
