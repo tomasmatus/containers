@@ -1,4 +1,4 @@
-FROM ghcr.io/cockpit-project/cockpit:latest
+FROM ghcr.io/cockpit-project/tasks:latest
 
 # Swtich back to root
 USER root
