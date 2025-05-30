@@ -46,6 +46,8 @@ jobs:
             type=sha,enable=${{ github.event_name == 'pull_request' }}
           labels: |
             org.opencontainers.image.url=https://github.com/${{ github.repository_owner }}/${{ matrix.container_dir }}
+          sep-tags: " "
+          sep-annotations: " "
 
       - name: Build image
         id: buildah_build
