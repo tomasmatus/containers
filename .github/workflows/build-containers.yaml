@@ -1,6 +1,9 @@
 ---
 name: Build containers
 on:
+  schedule:
+    # do the build on Sunday early morning
+    - cron: '0 3 * * SUN'
   workflow_dispatch:
 
 env:
