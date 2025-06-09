@@ -11,6 +11,7 @@ RUN dnf -y install --disablerepo=fedora-cisco-openh264 --setopt=install_weak_dep
         neovim \
         kitty \
 	tig \
+	ripgrep \
     && \
     dnf clean all
 
